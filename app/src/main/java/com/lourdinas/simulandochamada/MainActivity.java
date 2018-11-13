@@ -34,17 +34,30 @@ public class MainActivity extends AppCompatActivity {
 
                 String meuEmail = EdEmail.getText().toString();
                 String minhasenha = EdSenha.getText().toString();
-                if (meusDados.contains("email") && meusDados.contains("senha")){
-                    if(meuEmail.equals(meusDados.getString("email",""))
-                            && minhasenha.equals(meusDados.getString("senha",""))){
+                if (meusDados.contains("email") && meusDados.contains("senha")) {
+                    if (meuEmail.equals(meusDados.getString("email", ""))
+                            && minhasenha.equals(meusDados.getString("senha", ""))) {
 
-                        Intent intent = new Intent(MainActivity.this,Activity_telefone.class);
+                        Intent intent = new Intent(MainActivity.this, Activity_telefone.class);
                         startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(),
+                                "Email ou senha invalidos!", Toast.LENGTH_LONG).show();
                     }
                 }else {
                     Toast.makeText(getApplicationContext(),
-                            "Não existem cadastros!",Toast.LENGTH_LONG).show();
+                            "Não existem cadastros!", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        BtRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ActivityCadastro.class);
+                startActivity(intent);
+                finish();
             }
         });
 

@@ -7,13 +7,12 @@
     tools:context=".Activity_telefone">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txt_numero"
         android:layout_width="219dp"
         android:layout_height="64dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="83 9 6969-6969"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +29,7 @@
         android:layout_marginTop="8dp"
         android:background="@android:color/holo_orange_dark"
         android:text="C"
-        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_numero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toStartOf="parent"

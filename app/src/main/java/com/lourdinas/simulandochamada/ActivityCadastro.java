@@ -1,5 +1,6 @@
 package com.lourdinas.simulandochamada;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,8 @@ public class ActivityCadastro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+
+        meuDados = getSharedPreferences(mypreference, Context.MODE_PRIVATE);
 
         final EditText Novasenha = findViewById(R.id.senha);
         final EditText Novoemail = findViewById(R.id.email);
